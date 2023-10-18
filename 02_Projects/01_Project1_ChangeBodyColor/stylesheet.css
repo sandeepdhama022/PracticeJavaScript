@@ -1,9 +1,15 @@
-/*
+
 body {
-    background-color: #212121;
-    color: #ffffff;
+    align-items: center;
 }
-*/
+
+.container {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+}
 
 .button {
     display: inline-block;
@@ -11,7 +17,19 @@ body {
     height: 100px;
 }
 
-.grey {
+#grey {
     border: 2px solid black;
     background-color: grey;
+}
+#white {
+    border: 2px solid black;
+    background-color: white;
+}
+#blue {
+    border: 2px solid black;
+    background-color: blue;
+}
+#yellow {
+    border: 2px solid black;
+    background-color: yellow;
 }
