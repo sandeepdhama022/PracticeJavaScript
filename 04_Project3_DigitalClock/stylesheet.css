@@ -1,0 +1,21 @@
+#container {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    background-color: #212121;
+    color: #ffffff;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px;
+
+}
+
+#dtContainer {
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+    background-color: #ffffff;
+    color: #212121;
+    padding: 10px;
+    border-radius: 8px;
+}
