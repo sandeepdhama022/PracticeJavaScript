@@ -17,6 +17,7 @@ form.addEventListener('submit', function(event){
     }
     if(isNaN(weight)){
         result.innerHTML = 'Please enter a valid weight'
+        
         return;
     }
 
