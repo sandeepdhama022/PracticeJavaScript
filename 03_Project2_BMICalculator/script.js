@@ -11,15 +11,18 @@ form.addEventListener('submit', function(event){
     console.log(height);
     console.log(weight);
 
-    if(height  ){}
-
-    if(height === NaN || weight === NaN){
+    if(isNaN(height)){
+        result.innerHTML = 'Please enter a valid height'
+        return;
+    }
+    if(isNaN(weight)){
+        result.innerHTML = 'Please enter a valid weight'
         return;
     }
 
 
     const bmi = (weight / ((height*height)/10000)).toFixed(2)
 
-    // result.innerHTML = `BMI is ${bmi}`
+    result.innerHTML = `BMI is ${bmi}`
 
 })
