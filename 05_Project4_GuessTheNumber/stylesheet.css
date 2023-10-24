@@ -1,0 +1,23 @@
+#container {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#textboxNumber {
+    padding: 5px;
+    background-color: #212121;
+    border: 5px solid #b5b5b5;
+    color: #ffffff;
+    text-align: center;
+}
+
+#submitBtn{
+    padding: 15px;
+    background-color: #212121;
+    color: #b5b5b5;
+    font-weight: bolder;
+}
