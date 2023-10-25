@@ -7,7 +7,12 @@
     border-radius: 20px;
 }
 
-#textboxNumber {
+#lblGuess {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#txtGuess {
     padding: 5px;
     background-color: #212121;
     border: 5px solid #b5b5b5;
@@ -15,7 +20,7 @@
     text-align: center;
 }
 
-#submitBtn{
+#btnSubmit {
     padding: 15px;
     background-color: #212121;
     color: #b5b5b5;

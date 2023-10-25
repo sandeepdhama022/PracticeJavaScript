@@ -8,12 +8,19 @@
     <div id="container">
         <h2>Number Guessing Game</h2>
         <p>Try and guess a random number between 1 to 100.</p>
-        <p>You have 10 attempts to guess the right number.</p>
-        <form class="form"></form>
-        <input type="text" name="textboxNumber" id="textboxNumber"><br><br>
-        <input type="button" id="submitBtn" value="Submit Guess">
-        <p>Previous Guesses: <span id="PreviousGuesses"></span></p>
-        <p>Guesses Remaining: <span id="remainAttempts"></span></p>
+        <p>You have 10 attempts to guess the right number.</p><br>
+    
+        <form id="form class="form">
+            <label for="txtGuess" id="lblGuess">Guess a Number</label><br><br>
+            <input type="text" name="txtGuess" id="txtGuess"><br><br>
+            <input type="button" id="btnSubmit" value="Submit Guess"><br><br>
+        </form>
+
+        <div class="resultInfo">
+            <p>Previous Guesses: <span id="PrevGuesses"></span></p>
+            <p>Guesses Remaining: <span id="remAttempts"></span></p>
+            <p class="suggestion"></p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
