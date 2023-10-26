@@ -5,11 +5,12 @@ const userInput = document.querySelector('#txtGuess');
 const submit = document.querySelector('#btnSubmit');
 
 const resultSection = document.querySelector('#resultInfo');
-const preGuesses = document.querySelector('#PreviousGuesses');
+const preGuesses = document.querySelector('#PrevGuesses');
 const remainGuesses = document.querySelector('#remAttempts');
+let suggestion = document.querySelector('.suggestion')
 
 let arrPrevGuesses = [];
-let numGuess = 1;
+let numGuess = 10;
 
 let playGame = true;
 
@@ -36,20 +37,32 @@ function validateGuess(guess){
         showAlert('Please enter a number between 1 to 100')
     } else {
         arrPrevGuesses.push(guess)
+        showAlert('')
         checkGuess(guess)
     }
 }
 
 function showAlert(message){
-    //
+    suggestion.innerHTML = message
 }
 
-function checkGuess(){
-    //
+function checkGuess(guess){
+    if(guess === randomNum){
+        showAlert('You Won')
+        endGame()
+    } else if(guess < randomNum){
+        showAlert('Number you entered is too Low')
+        displayMessage(guess)
+    } else if(guess > randomNum){
+        showAlert('Number you entered is too High')
+        displayMessage(guess)
+    }
 }
 
-function displayMessage(){
-//
+function displayMessage(guess){
+    preGuesses.innerHTML = arrPrevGuesses
+    numGuess = numGuess - 1
+    remainGuesses.innerHTML = numGuess
 }
 
 function endGame(){
