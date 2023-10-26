@@ -22,14 +22,6 @@ if(playGame){
     })
 }
 
-/*
-Start the game if playGame value is true
-Check value is a number or not
-If number check number between 1 to 100
-Match the number with random number
-If not match update result info
-*/
-
 function validateGuess(guess){
     if(isNaN(guess)){
         showAlert('Please enter a valid number')
