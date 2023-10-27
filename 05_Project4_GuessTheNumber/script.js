@@ -14,7 +14,6 @@ let numGuess = 10;
 remainGuesses.innerHTML = numGuess
 let playGame = true;
 
-
 if(playGame){
     submit.addEventListener('click',function(e){
         e.preventDefault();
@@ -35,29 +34,16 @@ function validateGuess(guess){
     }
 }
 
-function showAlert(message){
-    suggestion.innerHTML = message
-}
-
-function createStartLink(infoMsg){
-    suggestion.innerHTML = `${infoMsg} to Start a New Game, <span id="newGame">Click Here</span>`
-    let newGame = document.querySelector('#newGame')
-    newGame.addEventListener('click', function(e){
-        startGame()
-    })
-}
-
-
-
 function checkGuess(guess){
     userInput.value = ''
-    if(remainGuesses < 1){
+    if(remainGuesses.innerHTML <= 1){
         endGame()
+        createStartLink(`Game Over!! Random Number was ${randomNum}`)
         return;
     }
     if(guess === randomNum){
-        createStartLink('You Won!!')
         endGame()
+        createStartLink('You Won!!')
     } else if(guess < randomNum){
         showAlert('Number you entered is too Low')
         displayMessage(guess)
@@ -78,7 +64,7 @@ function endGame(){
     playGame = false;
     preGuesses.innerHTML = ''
     remainGuesses.innerHTML = ''
-    createStartLink(`Game Over!! Random Number was ${randomNum}`)
+    userInput.setAttribute('disabled','')
 }
 
 function startGame(){
@@ -87,5 +73,18 @@ function startGame(){
     numGuess = 10;
     remainGuesses.innerHTML = numGuess
     suggestion.innerHTML = ''
+    userInput.removeAttribute('disabled')
     playGame = true;
+}
+
+function showAlert(message){
+    suggestion.innerHTML = message
+}
+
+function createStartLink(infoMsg){
+    suggestion.innerHTML = `${infoMsg} to Start a New Game, <span id="newGame">Click Here</span>`
+    let newGame = document.querySelector('#newGame')
+    newGame.addEventListener('click', function(e){
+        startGame()
+    })
 }
