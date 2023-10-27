@@ -7,15 +7,11 @@ const preGuesses = document.querySelector('#PrevGuesses');
 const remainGuesses = document.querySelector('#remAttempts');
 const suggestion = document.querySelector('.suggestion')
 
-function startGame(){
-    
-}
-
+// Set Essentials
 let randomNum = Math.floor(Math.random()*100)+1;
 let arrPrevGuesses = [];
 let numGuess = 10;
 remainGuesses.innerHTML = numGuess
-
 let playGame = true;
 
 
