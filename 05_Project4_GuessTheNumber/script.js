@@ -1,18 +1,23 @@
-const randomNum = Math.floor(Math.random()*100)+1;
-
+// Select Elements of the Game
 const form = document.querySelector('#container');
 const userInput = document.querySelector('#txtGuess');
 const submit = document.querySelector('#btnSubmit');
-
 const resultSection = document.querySelector('#resultInfo');
 const preGuesses = document.querySelector('#PrevGuesses');
 const remainGuesses = document.querySelector('#remAttempts');
-let suggestion = document.querySelector('.suggestion')
+const suggestion = document.querySelector('.suggestion')
 
+function startGame(){
+    
+}
+
+let randomNum = Math.floor(Math.random()*100)+1;
 let arrPrevGuesses = [];
 let numGuess = 10;
+remainGuesses.innerHTML = numGuess
 
 let playGame = true;
+
 
 if(playGame){
     submit.addEventListener('click',function(e){
@@ -39,6 +44,7 @@ function showAlert(message){
 }
 
 function checkGuess(guess){
+    userInput.value = ''
     if(guess === randomNum){
         showAlert('You Won')
         endGame()
@@ -58,7 +64,10 @@ function displayMessage(guess){
 }
 
 function endGame(){
-    //
+    arrPrevGuesses = []
+    numGuess = 10
+    preGuesses.innerHTML = ''
+    remainGuesses.innerHTML = ''
 }
 
 function startGame(){
