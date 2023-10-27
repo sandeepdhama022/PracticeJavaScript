@@ -39,10 +39,24 @@ function showAlert(message){
     suggestion.innerHTML = message
 }
 
+function createStartLink(infoMsg){
+    suggestion.innerHTML = `${infoMsg} to Start a New Game, <span id="newGame">Click Here</span>`
+    let newGame = document.querySelector('#newGame')
+    newGame.addEventListener('click', function(e){
+        startGame()
+    })
+}
+
+
+
 function checkGuess(guess){
     userInput.value = ''
+    if(remainGuesses < 1){
+        endGame()
+        return;
+    }
     if(guess === randomNum){
-        showAlert('You Won')
+        createStartLink('You Won!!')
         endGame()
     } else if(guess < randomNum){
         showAlert('Number you entered is too Low')
@@ -61,11 +75,17 @@ function displayMessage(guess){
 
 function endGame(){
     arrPrevGuesses = []
-    numGuess = 10
+    playGame = false;
     preGuesses.innerHTML = ''
     remainGuesses.innerHTML = ''
+    createStartLink(`Game Over!! Random Number was ${randomNum}`)
 }
 
 function startGame(){
-    //
+    randomNum = Math.floor(Math.random()*100)+1;
+    arrPrevGuesses = [];
+    numGuess = 10;
+    remainGuesses.innerHTML = numGuess
+    suggestion.innerHTML = ''
+    playGame = true;
 }

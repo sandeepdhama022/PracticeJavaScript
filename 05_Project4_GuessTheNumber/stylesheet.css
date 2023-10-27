@@ -1,8 +1,10 @@
 #container {
     width: 50%;
     margin: auto;
+    background-color: #eeeeee;
     text-align: center;
     padding: 20px;
+    border: 2px solid black;
 }
 
 #lblGuess {
