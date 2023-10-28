@@ -6,5 +6,6 @@ UnList.addEventListener('click',function(e){
 },false)
 
 element.addEventListener('click',function(e){
-    alert('Element was Clicked')
+    alert('Element was Clicked');
+    e.stopPropagation();
 },false)
