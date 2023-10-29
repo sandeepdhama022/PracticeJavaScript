@@ -1,0 +1,17 @@
+* {
+    margin-left: 10px;
+}
+
+body {
+    background-color: #414141;
+    color: aliceblue
+}
+
+.button {
+    padding: 10px 30px;
+    margin: 10px;
+    border: 1px solid aliceblue;
+    border-radius: 5px;
+    background-color: #212121;
+    color: #ffffff;
+}
