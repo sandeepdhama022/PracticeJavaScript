@@ -1,0 +1,21 @@
+#container{
+    border-radius: 20px;
+    display: inline-block;
+}
+
+#details{
+    display: inline-block;
+    position: absolute;
+    margin: 20px 10px 10px 20px;
+    width: 350px;
+}
+
+.avatar {
+    border-radius: inherit;
+    display: inherit;
+}
+
+h2{
+    margin: 10px;
+    text-align: left;
+}
